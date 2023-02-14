@@ -1,0 +1,28 @@
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+docker --version
+docker pull imagename
+docker images 			// show images
+docker image inspect iname 	// more detail
+docker run -p 80:80 iname	//run image
+docker ps 			//list all running containers
+docker ps -a
+docker stop cont_id		//stop running cont
+docker kill cont_id
+docker rm cont_id
+docker rmi img_id		//remove image
+docker build -t img_name 	//build image
+
+docker container logs cont_id
+		 kill
+		 rm
+		 run
+
+docker tag docker_id/image_name	//Tag docker file with docker hub repository	
+docker push docker_id/image_name	//Upload docker image to docker hub for everyone use
+docker exec -it container_id bash	//Access the working container bash terminal
+docker commit container_id new_name	//Create a new image with existing image
+docker export --output="any_name" contianer_id	//Export a container to the PC
+docker save -o image_name <repo>:<tag>  //Export an image to the PC
+docker load -i image_name	//Import an image into the docker from PC
